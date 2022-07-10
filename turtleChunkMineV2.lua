@@ -79,7 +79,7 @@ end
 -- mines a 16 block long strip mine --
 
 function strip16()
-    for strip=1,9 do
+    for strip=1,20 do
         advance1()
     end
 end

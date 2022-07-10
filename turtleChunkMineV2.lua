@@ -145,12 +145,16 @@ while true do
     outputItems()
     turtle.turnRight()
     for returnBack=1,10 do
+        fallCheckFront()
         turtle.forward()
     end
+
     turtle.turnLeft()
     turtle.select(3)
+    turtle.dropDown()
     turtle.digDown()
     for returnStart=1,10 do
+        fallCheckFront()
         turtle.forward()
     end
 end

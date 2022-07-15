@@ -47,5 +47,73 @@ function harvestColumn()
     end
 end
 
-turtle.forward()
-harvestColumn()
+-- Turn at the end --
+
+function strafeLeft()
+    turtle.turnLeft()
+    fuelCheck()
+    turtle.up()
+    for forward=1,4 do
+        fuelCheck()
+        turtle.forward()
+        fuelCheck()
+    end
+    turtle.down()
+    turtle.turnLeft()
+end
+    
+function strafeRight()
+    turtle.turnRight()
+    fuelCheck()
+    turtle.up()
+    for forward=1,4 do
+        fuelCheck()
+        turtle.forward()
+        fuelCheck()
+    end
+    turtle.down()
+    turtle.turnRight()
+end
+
+-- START HARVEST --
+
+while true do
+    turtle.forward()
+
+    for twoColumns=1,4 do
+        harvestColumn()
+        strafeLeft()
+        harvestColumn()
+        strafeRight()
+    end
+
+    harvestColumn()
+    fuelCheck()
+    turtle.forward()
+    turtle.turnLeft()
+
+    for return1=1,16 do
+        fuelCheck()
+        turtle.forward()
+    end
+
+    turtle.turnLeft()
+
+    for return2=1,44 do
+        fuelCheck()
+        turtle.forward()
+    end
+
+    turtle.turnLeft()
+    turtle.turnLeft()
+
+    -- deposit items --
+
+    for itemDrop=2,16 do
+        turtle.select(itemDrop)
+        turtle.dropDown()
+    end
+
+    turtle.select(2)
+    sleep(1800)
+end 

@@ -82,12 +82,15 @@ while true do
 
     for twoColumns=1,4 do
         harvestColumn()
+        harvestLine()
         strafeLeft()
         harvestColumn()
+        harvestLine()
         strafeRight()
     end
 
     harvestColumn()
+    harvestLine()
     fuelCheck()
     turtle.forward()
     turtle.turnLeft()

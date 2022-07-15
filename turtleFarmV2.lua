@@ -9,6 +9,7 @@ function fuelCheck()
         turtle.refuel(1)
         turtle.dropUp()
         turtle.digUp()
+        turtle.select(2)
     end
 end
 
@@ -28,9 +29,11 @@ end
 function harvestLine()
     turtle.turnRight()
     harvest()
+    turtle.place()
     turtle.turnLeft()
     turtle.turnLeft()
     harvest()
+    turtle.place()
     turtle.turnRight()
 end
 
@@ -44,4 +47,5 @@ function harvestColumn()
     end
 end
 
+turtle.forward()
 harvestColumn()

@@ -43,3 +43,5 @@ function harvestColumn()
         turtle.forward()
     end
 end
+
+harvestColumn()

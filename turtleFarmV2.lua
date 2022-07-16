@@ -80,7 +80,7 @@ end
 while true do
     turtle.forward()
 
-    for twoColumns=1,3 do
+    for twoColumns=1,2 do
         harvestColumn()
         harvestLine()
         strafeLeft()

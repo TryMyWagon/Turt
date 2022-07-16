@@ -93,14 +93,14 @@ while true do
     harvestLine()
     fuelCheck()
     turtle.forward()
-    turtle.turnLeft()
+    turtle.turnRight()
 
     for return1=1,16 do
         fuelCheck()
         turtle.forward()
     end
 
-    turtle.turnLeft()
+    turtle.turnRight()
 
     for return2=1,44 do
         fuelCheck()
